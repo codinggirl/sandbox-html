@@ -1,0 +1,13 @@
+#docker-compose.override.yml (Extended config for DEVELOPMENT env.)
+version: '3.4'
+
+services:
+
+  frontweb1:
+    image: sandbox/webfront:${TAG:-latest}
+    build: .
+
+  frontweb2:
+    image: sandbox/webfront:${TAG:-latest}
+    build: .
+

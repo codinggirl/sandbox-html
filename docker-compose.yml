@@ -1,0 +1,10 @@
+#docker-compose.yml (Base)
+version: '3.4'
+
+services:
+
+  frontweb1:
+    build: .
+
+  frontweb2:
+    build: .

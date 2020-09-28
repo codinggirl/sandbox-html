@@ -1,0 +1,24 @@
+#docker-compose.override.yml (Extended config for DEVELOPMENT env.)
+version: '3.4'
+
+services:
+
+  frontweb1:
+    image: sandbox/webfront:${TAG:-latest}
+    build: .
+    environment:
+      - NGINX_HOST=localhost
+      - NGINX_PORT=80
+      - APP_ROOT=/app
+    ports:
+      - 18080:80
+
+  frontweb2:
+    image: sandbox/webfront:${TAG:-latest}
+    build: .
+    environment:
+      - NGINX_HOST=localhost
+      - NGINX_PORT=80
+      - APP_ROOT=/app
+    ports:
+      - 28080:80
