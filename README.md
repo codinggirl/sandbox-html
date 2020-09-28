@@ -22,7 +22,7 @@ docker-compose up -d
 With rebuild option:
 
 ```shell
-docker-compose up -d
+docker-compose up -d --build
 ```
 
 ## LICENSE
